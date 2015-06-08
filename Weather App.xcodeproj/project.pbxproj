@@ -13,6 +13,7 @@
 		6F76E3241B23023600EC6E6C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F76E3231B23023600EC6E6C /* Images.xcassets */; };
 		6F76E3271B23023600EC6E6C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F76E3251B23023600EC6E6C /* LaunchScreen.xib */; };
 		6F76E3331B23023600EC6E6C /* Weather_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F76E3321B23023600EC6E6C /* Weather_AppTests.swift */; };
+		6F76E33D1B261D8C00EC6E6C /* moody-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F76E33C1B261D8C00EC6E6C /* moody-background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		6F76E32C1B23023600EC6E6C /* Weather AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Weather AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F76E3311B23023600EC6E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F76E3321B23023600EC6E6C /* Weather_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_AppTests.swift; sourceTree = "<group>"; };
+		6F76E33C1B261D8C00EC6E6C /* moody-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "moody-background.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		6F76E3191B23023600EC6E6C /* Weather App */ = {
 			isa = PBXGroup;
 			children = (
+				6F76E33C1B261D8C00EC6E6C /* moody-background.jpg */,
 				6F76E31C1B23023600EC6E6C /* AppDelegate.swift */,
 				6F76E31E1B23023600EC6E6C /* ViewController.swift */,
 				6F76E3201B23023600EC6E6C /* Main.storyboard */,
@@ -192,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F76E33D1B261D8C00EC6E6C /* moody-background.jpg in Resources */,
 				6F76E3221B23023600EC6E6C /* Main.storyboard in Resources */,
 				6F76E3271B23023600EC6E6C /* LaunchScreen.xib in Resources */,
 				6F76E3241B23023600EC6E6C /* Images.xcassets in Resources */,

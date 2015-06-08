@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,55 +16,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your location here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axv-MY-PmL">
-                                <rect key="frame" x="16" y="28" width="183" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="moody-background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Iga-8X-GsU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your location below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axv-MY-PmL">
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QcQ-LZ-TVD">
-                                <rect key="frame" x="16" y="65" width="288" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QcQ-LZ-TVD">
+                                <rect key="frame" x="16" y="86" width="288" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZA-jf-7tZ">
-                                <rect key="frame" x="16" y="115" width="30" height="30"/>
-                                <state key="normal" title="Find">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZA-jf-7tZ">
+                                <rect key="frame" x="76" y="129" width="168" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Whats the weather?">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cKR-U4-SoV"/>
                                 </connections>
                             </button>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5P-Qa-8Zf">
-                                <rect key="frame" x="0.0" y="175" width="320" height="393"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2P-aM-E9n">
+                                <rect key="frame" x="16" y="194" width="288" height="119"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="g5P-Qa-8Zf" secondAttribute="bottom" id="3n5-p4-xqW"/>
-                            <constraint firstItem="kZA-jf-7tZ" firstAttribute="top" secondItem="QcQ-LZ-TVD" secondAttribute="bottom" constant="20" id="7pS-mT-LGx"/>
-                            <constraint firstItem="QcQ-LZ-TVD" firstAttribute="top" secondItem="axv-MY-PmL" secondAttribute="bottom" constant="16" id="AUz-SH-rPF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="g5P-Qa-8Zf" secondAttribute="trailing" constant="-16" id="Ed3-ct-AKz"/>
-                            <constraint firstItem="g5P-Qa-8Zf" firstAttribute="top" secondItem="kZA-jf-7tZ" secondAttribute="bottom" constant="30" id="KT1-cT-1UY"/>
-                            <constraint firstItem="QcQ-LZ-TVD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="RBU-cS-M6k"/>
-                            <constraint firstItem="kZA-jf-7tZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="apm-3C-S3S"/>
-                            <constraint firstItem="axv-MY-PmL" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="bi5-LY-KXT"/>
-                            <constraint firstItem="g5P-Qa-8Zf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="fzp-MN-ExS"/>
-                            <constraint firstItem="kZA-jf-7tZ" firstAttribute="top" secondItem="QcQ-LZ-TVD" secondAttribute="bottom" constant="20" id="w77-yT-gGh"/>
-                            <constraint firstItem="QcQ-LZ-TVD" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="wqB-0m-zyM"/>
-                            <constraint firstItem="axv-MY-PmL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="yLb-Qj-dNs"/>
-                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="textField" destination="QcQ-LZ-TVD" id="Y7t-g1-DRp"/>
-                        <outlet property="webView" destination="g5P-Qa-8Zf" id="dbK-Bn-KiZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="moody-background.jpg" width="976" height="549"/>
+    </resources>
 </document>

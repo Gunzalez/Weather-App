@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     let urlStart = "http://www.weather-forecast.com/locations/";
     let urlEnd = "/forecasts/latest";
     
+    @IBOutlet var weatherText: UILabel!
     
     @IBOutlet var textField: UITextField!
     
@@ -64,7 +65,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
                         
                         weather = weatherArray[0] as! String;
                         
-                        println(weather);
+                        //println(weather);
+                        self.weatherText.text = weather;
                     
                     }
                 
