@@ -39,9 +39,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if !val.isEmpty {
             
             val = val.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet());
+            
+            
+            val = val.stringByReplacingOccurrencesOfString(" ", withString: "-");
         
             var urlString = urlStart + val + urlEnd;
-        
+            
+            //val = val.stringByReplacingOccurrencesOfString(" ", withString: "-");
+            
             var url = NSURL(string: urlString);
         
             let task = NSURLSession.sharedSession().dataTaskWithURL(url!){
@@ -62,6 +67,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                         weather = weatherArray[0] as! String;
                         
                         weather = weather.stringByReplacingOccurrencesOfString("&deg;C", withString: "º")
+                        
                         //println(weather);
                         self.weatherText.text = weather;
                     
@@ -94,7 +100,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         getWeather();
         
-        return false;
+        return true;
         
     }
     
