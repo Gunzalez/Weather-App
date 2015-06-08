@@ -17,8 +17,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var textField: UITextField!
     
-    @IBOutlet var webView: UIWebView!
-    
     @IBAction func buttonPressed(sender: AnyObject) {
         
         self.textField.resignFirstResponder();
@@ -51,13 +49,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
                 if(error == nil){
                 
-                    var content = NSString(data: data, encoding: NSUTF8StringEncoding);
+                    var content = NSString(data: data, encoding: NSUTF8StringEncoding) as NSString!;
                     
                     dispatch_async(dispatch_get_main_queue()){
-                
-                        //self.webView.loadHTMLString(content! as String, baseURL: nil);
                         
-                        contentArray = content!.componentsSeparatedByString("<span class=\"phrase\">");
+                        contentArray = content.componentsSeparatedByString("<span class=\"phrase\">");
                         
                         weather = contentArray[1] as! String;
                         
@@ -65,6 +61,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                         
                         weather = weatherArray[0] as! String;
                         
+                        weather = weather.stringByReplacingOccurrencesOfString("&deg;C", withString: "º")
                         //println(weather);
                         self.weatherText.text = weather;
                     
@@ -74,6 +71,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         
             task.resume();
+            
+        } else {
+            
+            weatherText.text = "Please enter a city, stupid!";
             
         }
         
